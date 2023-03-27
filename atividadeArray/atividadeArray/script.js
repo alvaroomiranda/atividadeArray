@@ -1,16 +1,16 @@
     function addItem() {
-        const inputText = document.getElementById("input-text");
-        const list = document.getElementById("list");
+        const ullist = document.getElementById("ul-list");
+        const textInput = document.getElementById("text");
         const item = document.createElement("li");
-        item.innerText = inputText.value;
+        item.innerText = textInput.value;
         list.appendChild(item);
-        inputText.value = "";
+        textInput.value = "";
       }
 
       function sortList() {
-        const list = document.getElementById("list");
-        const items = list.getElementsByTagName("li");
+        const list = document.getElementById("ul-list");
         const sortedItems = Array.from(items).sort((a, b) => a.innerText.localeCompare(b.innerText));
+        const items = list.getElementsByTagName("li");
         for (let item of sortedItems) {
           list.appendChild(item);
         }
