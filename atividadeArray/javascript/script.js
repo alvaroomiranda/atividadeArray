@@ -1,0 +1,1 @@
+var objetos =Array('teste','teste2','teste3' )
